@@ -1,0 +1,30 @@
+
+alias e 'emacs -geometry 160x80 \!* &'
+alias g 'gvim -geometry 100x30+100+100 \!*  &'
+
+alias prompt_red   'set prompt = "%{\033[31m%}%n@%m%{\033[36m%}%~%{\033[31m%}>%{\033[0m%} "'
+alias prompt_cyan  'set prompt = "%{\033[36m%}%n@%m%~>%{\033[0m%} "'
+alias prompt_brown 'set prompt = "%{\033[33m%}%n@%m%~>%{\033[0m%} "'
+alias prompt_blue  'set prompt = "%{\033[34m%}%n@%m%~>%{\033[0m%} "'
+alias prompt_white 'set prompt = "%{\033[37m%}%n@%m%~>%{\033[0m%} "'
+
+
+# My Subelime Alias:
+alias winpath '~/winpath \!*'
+alias win '~/winpath \!* | xclip'
+
+alias ll 'ls -l'
+alias j 'jobs'
+alias gt 'gnome-terminal &'
+alias l 'less -S'
+alias des 'xrandr -s 8'
+alias des2 'xrandr -s 7'
+alias lap 'xrandr -s 4'
+
+
+if ($?prompt) then
+	set prompt="%n@%m %c2> "
+	set prompt="%{\033[31m%}%n@%m%{\033[36m%}%~%{\033[31m%}>%{\033[0m%} "
+	bindkey -k up history-search-backward
+	bindkey -k down history-search-forward
+endif
